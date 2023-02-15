@@ -1,10 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const Currency = () => {
   const { dispatch } = useContext(AppContext);
-  const [currencyLabel, setCurrencyLabel] = useState('$ Dollar');
-  const [showClass, setShowClass] = useState('');
 
   const changeCurency = (val)=>{
     dispatch({
@@ -12,8 +10,6 @@ const Currency = () => {
         payload: val,
     })  
   }
-
-  console.log(showClass)
   
   return (
     <div className='alert alert-secondary'>
